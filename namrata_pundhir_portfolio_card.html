@@ -1,0 +1,68 @@
+
+<style>
+  .root { padding: 2rem 0; font-family: var(--font-sans); }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 2rem; max-width: 640px; margin: 0 auto; }
+  .header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; }
+  .avatar { width: 56px; height: 56px; border-radius: 50%; background: #EEEDFE; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 500; color: #3C3489; flex-shrink: 0; }
+  .name { font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+  .role-badge { display: inline-block; font-size: 12px; padding: 3px 10px; border-radius: var(--border-radius-md); background: #EEEDFE; color: #3C3489; font-weight: 500; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.25rem 0; }
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-tertiary); font-weight: 500; margin: 0 0 0.75rem; }
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+  .skill { font-size: 13px; padding: 5px 12px; border-radius: 999px; border: 0.5px solid var(--color-border-secondary); color: var(--color-text-secondary); background: var(--color-background-secondary); }
+  .skill.ai { background: #E1F5EE; color: #085041; border-color: #5DCAA5; }
+  .goal-block { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem 1.25rem; display: flex; gap: 12px; align-items: flex-start; }
+  .goal-icon { font-size: 20px; color: #534AB7; margin-top: 1px; }
+  .goal-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.6; }
+  .goal-text span { font-weight: 500; }
+  .cta-row { display: flex; gap: 10px; margin-top: 1.5rem; }
+  .cta-btn { flex: 1; padding: 9px 0; font-size: 13px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-primary); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: background 0.15s; }
+  .cta-btn:hover { background: var(--color-background-secondary); }
+  .cta-btn.primary { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
+  .cta-btn.primary:hover { background: #CECBF6; }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #1D9E75; display: inline-block; margin-right: 4px; }
+</style>
+
+<div class="root">
+  <h2 class="sr-only">Portfolio card for Namrata Pundhir, B.Tech IT student and aspiring AI Engineer</h2>
+  <div class="card">
+    <div class="header">
+      <div class="avatar">NP</div>
+      <div>
+        <p class="name">Namrata Pundhir</p>
+        <span class="role-badge"><i class="ti ti-school" aria-hidden="true" style="font-size:12px; vertical-align:-1px; margin-right:4px;"></i>B.Tech IT Student</span>
+      </div>
+      <div style="margin-left:auto; font-size:13px; color: var(--color-text-secondary); display:flex; align-items:center;">
+        <span class="status-dot"></span>Open to opportunities
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">Skills</p>
+    <div class="skills">
+      <span class="skill"><i class="ti ti-coffee" aria-hidden="true" style="font-size:13px; vertical-align:-1px; margin-right:4px;"></i>Java</span>
+      <span class="skill"><i class="ti ti-brand-python" aria-hidden="true" style="font-size:13px; vertical-align:-1px; margin-right:4px;"></i>Python</span>
+      <span class="skill"><i class="ti ti-brand-react" aria-hidden="true" style="font-size:13px; vertical-align:-1px; margin-right:4px;"></i>React</span>
+      <span class="skill"><i class="ti ti-brand-git" aria-hidden="true" style="font-size:13px; vertical-align:-1px; margin-right:4px;"></i>Git</span>
+      <span class="skill ai"><i class="ti ti-brain" aria-hidden="true" style="font-size:13px; vertical-align:-1px; margin-right:4px;"></i>AI</span>
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">Goal</p>
+    <div class="goal-block">
+      <i class="ti ti-rocket goal-icon" aria-hidden="true"></i>
+      <p class="goal-text">Become an <span>AI Engineer</span> and make meaningful contributions to <span>Open Source</span> — building tools that matter.</p>
+    </div>
+
+    <div class="cta-row">
+      <button class="cta-btn primary" onclick="sendPrompt('What roadmap should I follow to become an AI Engineer?')">
+        <i class="ti ti-map" aria-hidden="true" style="font-size:15px;"></i> AI Engineer roadmap ↗
+      </button>
+      <button class="cta-btn" onclick="sendPrompt('How can I start contributing to open source projects as a student?')">
+        <i class="ti ti-git-pull-request" aria-hidden="true" style="font-size:15px;"></i> Open source guide ↗
+      </button>
+    </div>
+  </div>
+</div>
